@@ -1,8 +1,9 @@
 # Image-Denoising-in-extreme-low-light
-#### >Used a U-net on the Raw images as input
-#### >Used the weighted average of ​ edge loss, PSNR loss and 1- SSIM​ as the loss function
-#### >For the edge loss calculation a canny map was used
-#### >The output was RGB denoised image
+#### 1) Used a U-net on the Raw images as input
+#### 2) Used the weighted average of ​ edge loss, PSNR loss and 1- SSIM​ as the loss function
+#### 3) For the edge loss calculation a canny map was used
+#### 4) The output was RGB denoised image
+#### 5) The model is inspired from the paper 'Seeing in the dark' https://arxiv.org/abs/1805.01934
 _______________________________________________________________________________________________________________________________
 
 # MODEL
