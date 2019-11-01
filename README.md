@@ -4,7 +4,7 @@
 #### 3) For the edge loss calculation a canny map was used
 #### 4) The output was RGB denoised image
 #### 5) The model is inspired from the paper 'Seeing in the dark ' https://arxiv.org/abs/1805.01934
-#### 6) In comparison to the above paper we changed the loss function and also used canny map to calculate edge loss
+#### 6) In comparison to the above paper we changed the loss function and also used canny map to calculate   edge loss
 _______________________________________________________________________________________________________________________________
 
 # MODEL
