@@ -104,8 +104,8 @@ class Network:
         return loss
 
 
-    def image_normalization(self,image):
-        return image / 255
+    #def image_normalization(self,image):
+     #   return image / 255
 
     def randomcrop(self,img1,img2,size=[512,512]):
         assert img1.shape[0] >= size[0]
@@ -115,7 +115,8 @@ class Network:
         x = random.randint(0, img1.shape[1] - size[0])
         y = random.randint(0, img1.shape[0] - size[1])
 
-        img1 = img1[y:y + size[0], x:x + size[1]]
+      
+   img1 = img1[y:y + size[0], x:x + size[1]]
         img2 = img2[y:y + size[0], x:x + size[1]]
         return img1,img2
 
@@ -125,7 +126,7 @@ class Network:
             image = cv2.imread(train_dir + path)
             for _ in range(self.crops_per_image):
                 img = self.randomcrop(image, self.SIZE)
-                img = self.image_normalization(img)
+                #img = self.image_normalization(img)
                 train.append(np.array(img))
                 del img
             del image
@@ -137,7 +138,7 @@ class Network:
             image = cv2.imread(test_dir + path)
             for _ in range(self.crops_per_image):
                 img = self.randomcrop(image, self.SIZE)
-                img = self.image_normalization(img)
+                #img = self.image_normalization(img)
                 test.append(np.array(img))
                 del img
             del image
