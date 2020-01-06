@@ -120,29 +120,29 @@ class Network:
         img2 = img2[y:y + size[0], x:x + size[1]]
         return img1,img2
 
-    def load_train_data(self):
-        train = []
-        for path in os.listdir(train_dir):
-            image = cv2.imread(train_dir + path)
-            for _ in range(self.crops_per_image):
-                img = self.randomcrop(image, self.SIZE)
-                #img = self.image_normalization(img)
-                train.append(np.array(img))
-                del img
-            del image
-        return np.array(train)
+    #def load_train_data(self):
+     #   train = []
+      #  for path in os.listdir(train_dir):
+       #     image = cv2.imread(train_dir + path)
+       #     for _ in range(self.crops_per_image):
+       #         img = self.randomcrop(image, self.SIZE)
+       #         #img = self.image_normalization(img)
+       #         train.append(np.array(img))
+        #        del img
+        #    del image
+        #return np.array(train)
 
-    def load_test_data(self):
-        test = []
-        for path in os.listdir(test_dir):
-            image = cv2.imread(test_dir + path)
-            for _ in range(self.crops_per_image):
-                img = self.randomcrop(image, self.SIZE)
-                #img = self.image_normalization(img)
-                test.append(np.array(img))
-                del img
-            del image
-        return np.array(test)
+    #def load_test_data(self):
+     #   test = []
+     #   for path in os.listdir(test_dir):
+     #       image = cv2.imread(test_dir + path)
+     #       for _ in range(self.crops_per_image):
+     #           img = self.randomcrop(image, self.SIZE)
+     #           #img = self.image_normalization(img)
+     #           test.append(np.array(img))
+     #           del img
+     #       del image
+     #   return np.array(test)
 
 
     def summary(self):
