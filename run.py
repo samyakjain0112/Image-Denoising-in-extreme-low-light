@@ -13,7 +13,7 @@ import pandas as pd
 train_dir = 'dataset/Sony/sony/long/'
 test_dir = 'dataset/Sony/sony/short/'
 BATCH_SIZE=1
-EPOCH=100
+EPOCH=1000
 
 class Network:
 
@@ -24,7 +24,7 @@ class Network:
         self.k1=1
         self.k2=1
         self.model=None
-        self.lr=1e-3
+        self.lr=1e-4
         self.batch_size=1
         self.losses=[]
     def my_model(self):
