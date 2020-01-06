@@ -70,13 +70,13 @@ class Network:
         out28 = Concatenate()([out2, out27])
 
         out29 = Conv2D(32, [3, 3], activation='relu', padding='same')(out28)
-        out30 = Conv2D(4, [3, 3], activation='relu', padding='same')(out29)
+        #out30 = Conv2D(4, [3, 3], activation='relu', padding='same')(out29)
 
-        out31 = Conv2DTranspose(4, [2, 2], [2, 2], padding='same')(out30)
+        #out31 = Conv2DTranspose(4, [2, 2], [2, 2], padding='same')(out30)
 
-        out32 = Conv2D(16, [3, 3], activation='relu', padding='same')(out31)
-        out33 = Conv2D(16, [3, 3], activation='relu', padding='same')(out32)
-        out34 = Conv2D(3, [1, 1], activation='sigmoid', padding='same')(out33)
+        out30 = Conv2D(16, [3, 3], activation='relu', padding='same')(out29)
+        out31 = Conv2D(16, [3, 3], activation='relu', padding='same')(out30)
+        out32 = Conv2D(3, [1, 1], activation='sigmoid', padding='same')(out31)
         #ans = tf.depth_to_space(out31, 2)
         self.model = Model(inputs=inp, outputs=out30)
         return self.model
