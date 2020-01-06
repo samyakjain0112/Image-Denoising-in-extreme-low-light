@@ -78,7 +78,7 @@ class Network:
         out31 = Conv2D(16, [3, 3], activation='relu', padding='same')(out30)
         out32 = Conv2D(3, [1, 1], activation='sigmoid', padding='same')(out31)
         #ans = tf.depth_to_space(out31, 2)
-        self.model = Model(inputs=inp, outputs=out30)
+        self.model = Model(inputs=inp, outputs=out32)
         return self.model
 
     def loss(self,y_true,y_pred):
